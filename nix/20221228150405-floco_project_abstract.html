@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-28 Wed 18:21 -->
+<!-- 2022-12-29 Thu 16:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Floco About</title>
+<title>Floco Project Abstract</title>
 <meta name="author" content="Alex Ameen" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -384,26 +384,26 @@ table .right {
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Floco About</h1>
+<h1 class="title">Floco Project Abstract</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org19766a8">1. Starting Point</a>
+<li><a href="#orga6bc68a">1. Starting Point</a>
 <ul>
-<li><a href="#org092af32">1.1. Requirements</a></li>
+<li><a href="#org584a1f8">1.1. Requirements</a></li>
 </ul>
 </li>
-<li><a href="#org623bf08">2. Approach</a>
+<li><a href="#orgabd2130">2. Approach</a>
 <ul>
-<li><a href="#org819f3e2">2.1. Next Steps</a></li>
+<li><a href="#orgf22964d">2.1. Working Toward Production</a></li>
 </ul>
 </li>
-<li><a href="#org85cffb7">3. Features</a></li>
-<li><a href="#orgb7573a2">4. Release Progress and Future Extensions</a>
+<li><a href="#orgf419a52">3. Features</a></li>
+<li><a href="#org539aff3">4. Release Progress and Future Extensions</a>
 <ul>
-<li><a href="#orgdda9890">4.1. Release Preparation</a></li>
-<li><a href="#orgf7286dd">4.2. Future Extensions</a></li>
+<li><a href="#org71d8821">4.1. Release Preparation</a></li>
+<li><a href="#org0ad7e6d">4.2. Future Extensions</a></li>
 </ul>
 </li>
 </ul>
@@ -414,8 +414,8 @@ table .right {
 <i>Node.js</i> package and build management.
 </p>
 
-<div id="outline-container-org19766a8" class="outline-2">
-<h2 id="org19766a8"><span class="section-number-2">1.</span> Starting Point</h2>
+<div id="outline-container-orga6bc68a" class="outline-2">
+<h2 id="orga6bc68a"><span class="section-number-2">1.</span> Starting Point</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Originally tasked with optimizing an existing set of ~170 <code>yarn</code> projects in a
@@ -428,8 +428,8 @@ my team and I concluded that the tool could not meet our needs.
 </p>
 </div>
 
-<div id="outline-container-org092af32" class="outline-3">
-<h3 id="org092af32"><span class="section-number-3">1.1.</span> Requirements</h3>
+<div id="outline-container-org584a1f8" class="outline-3">
+<h3 id="org584a1f8"><span class="section-number-3">1.1.</span> Requirements</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>All 170+ projects must build on <code>x86-64</code> and <code>aarch64</code> ( <i>ARM</i> )
@@ -458,7 +458,6 @@ under 5 minutes.
 <ul class="org-ul">
 <li>This time limit was set roughly based on the time it takes to build on
 a machine with populated caches.</li>
-<li>I personally found this requirement to be overly ambitious.</li>
 </ul></li>
 <li>New build pipeline for both CI/CD and local development must not interfere
 with existing flows until it can serve as a complete replacement for
@@ -475,15 +474,15 @@ underneath us at any time.</li>
 </div>
 </div>
 
-<div id="outline-container-org623bf08" class="outline-2">
-<h2 id="org623bf08"><span class="section-number-2">2.</span> Approach</h2>
+<div id="outline-container-orgabd2130" class="outline-2">
+<h2 id="orgabd2130"><span class="section-number-2">2.</span> Approach</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Roughly 4 months were dedicated to researching available tooling, new project
 organization strategies, and caching solutions.
 Eventually a prototype fork of our mono-repo was created which used a
 declarative package management tool <code>nix</code> in combination with <code>npm</code> and
-various bespoke scripts/=Makefile=s to dynamically generate 7,000+ build
+various bespoke scripts and <code>Makefile</code> to dynamically generate 7,000+ build
 recipes with fine grained caching.
 </p>
 
@@ -500,8 +499,8 @@ dramatically reducing load on CI/CD.
 </p>
 </div>
 
-<div id="outline-container-org819f3e2" class="outline-3">
-<h3 id="org819f3e2"><span class="section-number-3">2.1.</span> Next Steps</h3>
+<div id="outline-container-orgf22964d" class="outline-3">
+<h3 id="orgf22964d"><span class="section-number-3">2.1.</span> Working Toward Production</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Using this approach as a model, I began building a new package management
@@ -520,8 +519,8 @@ metadata such that <code>floco</code> would be interoperable with these tools
 </div>
 
 
-<div id="outline-container-org85cffb7" class="outline-2">
-<h2 id="org85cffb7"><span class="section-number-2">3.</span> Features</h2>
+<div id="outline-container-orgf419a52" class="outline-2">
+<h2 id="orgf419a52"><span class="section-number-2">3.</span> Features</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The following features are fully implemented in the beta release of
@@ -547,7 +546,8 @@ handled dynamically.</li>
 <li>Standalone module installer written in <code>bash</code>.
 <ul class="org-ul">
 <li>This installer is used by <code>nix</code> to avoid dependence on <code>node</code> and other
-tooling; but can also be run standalone as an analogue to <code>pacote</code>.</li>
+tooling; but can also be run standalone as an analogue to
+<a href="https://github.com/npm/pacote/blob/main/README.md">pacote</a>.</li>
 <li>Using only <code>coreutils</code>, <code>findutils</code>, and <code>jq</code> a <code>node_modules/</code> tree can
 be created from published packages or built artifacts.
 This utility is ideal usage in sandboxes and <i>OCI</i> containers in CI/CD.</li>
@@ -586,9 +586,19 @@ other <i>Node.js</i> package management tooling.</li>
 <li>Well documented project templates provide an easy entry point to start using
 <code>floco</code> on existing <code>npm</code> projects.
 <ul class="org-ul">
-<li>The vast majority of projects need only run
-<code>nix init -t floco &amp;&amp; nix flake lock &amp;&amp; git add flake.* &amp;&amp; nix build</code> to
-get up and running.</li>
+<li><p>
+The vast majority of projects need only run the following snippet to get
+up and running:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">nix flake init -t github:aameen-tulip/at-node-nix;
+<span style="color: #ECBE7B;">git</span> add ./flake.nix;
+nix flake lock;
+<span style="color: #ECBE7B;">git</span> add ./flake.lock;
+nix build;
+<span style="color: #ECBE7B;">ls</span> -R ./result;
+</pre>
+</div></li>
 <li>Additional templates for more complex use cases, for example managing
 multiple projects in different repositories, are provided.
 While these often require more setup, the process is documented such that
@@ -623,12 +633,24 @@ employed by <code>nix</code>.</li>
 from existing build recipes to avoid any &ldquo;well it works on my machine&rdquo;
 nonsense among team members.</li>
 </ul></li>
+<li>Large public collection of package definitions:
+<a href="https://github.com/aakropotkin/flocoPackages.git">flocoPackages</a>
+<ul class="org-ul">
+<li>This package set covers the top 1,000 most popular Node.js packages and
+their full dependency graphs.</li>
+<li>This collection is accompanied by a public artifact cache, allowing users
+to completely skip builds and installs for these packages.
+Unlike existing <code>yarn</code> and <code>npm</code> package registries, this binary cache
+hosts artifacts that contain compiled binaries that are ready to run.</li>
+<li>These package definitions may be composed with the same style of overrides
+used by local projects, and share the same evaluation caching behaviors.</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb7573a2" class="outline-2">
-<h2 id="orgb7573a2"><span class="section-number-2">4.</span> Release Progress and Future Extensions</h2>
+<div id="outline-container-org539aff3" class="outline-2">
+<h2 id="org539aff3"><span class="section-number-2">4.</span> Release Progress and Future Extensions</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 While an incredible amount of progress has been made so far over the last 9
@@ -637,8 +659,8 @@ well as plans for future extensions.
 </p>
 </div>
 
-<div id="outline-container-orgdda9890" class="outline-3">
-<h3 id="orgdda9890"><span class="section-number-3">4.1.</span> Release Preparation</h3>
+<div id="outline-container-org71d8821" class="outline-3">
+<h3 id="org71d8821"><span class="section-number-3">4.1.</span> Release Preparation</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 While the prototype implementation relied heavily on <code>npm</code> and the
@@ -669,8 +691,8 @@ provide <i>ideal tree</i> information for non-trivial projects.
 </div>
 </div>
 
-<div id="outline-container-orgf7286dd" class="outline-3">
-<h3 id="orgf7286dd"><span class="section-number-3">4.2.</span> Future Extensions</h3>
+<div id="outline-container-org0ad7e6d" class="outline-3">
+<h3 id="org0ad7e6d"><span class="section-number-3">4.2.</span> Future Extensions</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Many of the following extensions have function drafts or well tested
@@ -737,7 +759,7 @@ Still this effort requires a few weeks of polishing to really approve
 for use in production.</li>
 <li>Construction of <i>ideal tree</i> from semver SAT is a project in and of
 itself in order to support things like <code>optionDependencies</code>,
-<code>peerDependencies</code>, <code>bunbledDependencies</code>, and other oddballs which are
+<code>peerDependencies</code>, <code>bundledDependencies</code>, and other oddballs which are
 a prerequisite for use in the general case.</li>
 </ul></li>
 </ul>
@@ -747,7 +769,7 @@ a prerequisite for use in the general case.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Alex Ameen</p>
-<p class="date">Created: 2022-12-28 Wed 18:21</p>
+<p class="date">Created: 2022-12-29 Thu 16:02</p>
 </div>
 </body>
 </html>
