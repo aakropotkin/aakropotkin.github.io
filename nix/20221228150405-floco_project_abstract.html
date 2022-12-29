@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-29 Thu 16:02 -->
+<!-- 2022-12-29 Thu 16:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Floco Project Abstract</title>
@@ -232,12 +232,12 @@ a {
 }
 p {
   margin: 6px 0;
-  text-align: left;
+  text-align: justify;
 }
 ul,
 ol {
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 ul > li > code {
   color: #586b82;
@@ -389,21 +389,21 @@ table .right {
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga6bc68a">1. Starting Point</a>
+<li><a href="#orgb3c33c2">1. Starting Point</a>
 <ul>
-<li><a href="#org584a1f8">1.1. Requirements</a></li>
+<li><a href="#org183e560">1.1. Requirements</a></li>
 </ul>
 </li>
-<li><a href="#orgabd2130">2. Approach</a>
+<li><a href="#org5baeea4">2. Approach</a>
 <ul>
-<li><a href="#orgf22964d">2.1. Working Toward Production</a></li>
+<li><a href="#org03c6e8a">2.1. Working Toward Production</a></li>
 </ul>
 </li>
-<li><a href="#orgf419a52">3. Features</a></li>
-<li><a href="#org539aff3">4. Release Progress and Future Extensions</a>
+<li><a href="#org9f66a56">3. Features</a></li>
+<li><a href="#org15f34a8">4. Release Progress and Future Extensions</a>
 <ul>
-<li><a href="#org71d8821">4.1. Release Preparation</a></li>
-<li><a href="#org0ad7e6d">4.2. Future Extensions</a></li>
+<li><a href="#orgeb82173">4.1. Release Preparation</a></li>
+<li><a href="#org979a442">4.2. Future Extensions</a></li>
 </ul>
 </li>
 </ul>
@@ -414,8 +414,8 @@ table .right {
 <i>Node.js</i> package and build management.
 </p>
 
-<div id="outline-container-orga6bc68a" class="outline-2">
-<h2 id="orga6bc68a"><span class="section-number-2">1.</span> Starting Point</h2>
+<div id="outline-container-orgb3c33c2" class="outline-2">
+<h2 id="orgb3c33c2"><span class="section-number-2">1.</span> Starting Point</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Originally tasked with optimizing an existing set of ~170 <code>yarn</code> projects in a
@@ -428,8 +428,8 @@ my team and I concluded that the tool could not meet our needs.
 </p>
 </div>
 
-<div id="outline-container-org584a1f8" class="outline-3">
-<h3 id="org584a1f8"><span class="section-number-3">1.1.</span> Requirements</h3>
+<div id="outline-container-org183e560" class="outline-3">
+<h3 id="org183e560"><span class="section-number-3">1.1.</span> Requirements</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>All 170+ projects must build on <code>x86-64</code> and <code>aarch64</code> ( <i>ARM</i> )
@@ -443,7 +443,7 @@ developers as a part of their pre-commit or pre-pull-request process.</li>
 </ul></li>
 <li>Any number of projects may be modified in a single pull request.
 <ul class="org-ul">
-<li>This effectively ruled out using a private NPM registry to cache
+<li>This effectively ruled out using a private <code>npm</code> registry to cache
 artifacts - even for staging.</li>
 </ul></li>
 <li>Any number of new projects or dependencies may be added or removed in a
@@ -474,8 +474,8 @@ underneath us at any time.</li>
 </div>
 </div>
 
-<div id="outline-container-orgabd2130" class="outline-2">
-<h2 id="orgabd2130"><span class="section-number-2">2.</span> Approach</h2>
+<div id="outline-container-org5baeea4" class="outline-2">
+<h2 id="org5baeea4"><span class="section-number-2">2.</span> Approach</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Roughly 4 months were dedicated to researching available tooling, new project
@@ -499,8 +499,8 @@ dramatically reducing load on CI/CD.
 </p>
 </div>
 
-<div id="outline-container-orgf22964d" class="outline-3">
-<h3 id="orgf22964d"><span class="section-number-3">2.1.</span> Working Toward Production</h3>
+<div id="outline-container-org03c6e8a" class="outline-3">
+<h3 id="org03c6e8a"><span class="section-number-3">2.1.</span> Working Toward Production</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Using this approach as a model, I began building a new package management
@@ -519,8 +519,8 @@ metadata such that <code>floco</code> would be interoperable with these tools
 </div>
 
 
-<div id="outline-container-orgf419a52" class="outline-2">
-<h2 id="orgf419a52"><span class="section-number-2">3.</span> Features</h2>
+<div id="outline-container-org9f66a56" class="outline-2">
+<h2 id="org9f66a56"><span class="section-number-2">3.</span> Features</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The following features are fully implemented in the beta release of
@@ -649,8 +649,8 @@ used by local projects, and share the same evaluation caching behaviors.</li>
 </div>
 </div>
 
-<div id="outline-container-org539aff3" class="outline-2">
-<h2 id="org539aff3"><span class="section-number-2">4.</span> Release Progress and Future Extensions</h2>
+<div id="outline-container-org15f34a8" class="outline-2">
+<h2 id="org15f34a8"><span class="section-number-2">4.</span> Release Progress and Future Extensions</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 While an incredible amount of progress has been made so far over the last 9
@@ -659,8 +659,8 @@ well as plans for future extensions.
 </p>
 </div>
 
-<div id="outline-container-org71d8821" class="outline-3">
-<h3 id="org71d8821"><span class="section-number-3">4.1.</span> Release Preparation</h3>
+<div id="outline-container-orgeb82173" class="outline-3">
+<h3 id="orgeb82173"><span class="section-number-3">4.1.</span> Release Preparation</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 While the prototype implementation relied heavily on <code>npm</code> and the
@@ -679,7 +679,7 @@ Existing translators are currently being migrated to NixOS Modules, a well
 established super-set of Nix used to compose disparate declaration files.
 Currently the core schema has been migrated and documented, as well as the
 <code>package-lock.json</code> v2/v3 and <code>package.json</code> translators are functional.
-The usage of NixOS Modules instead of existing YANTS and <i>metaEnt</i> formats
+The usage of NixOS Modules instead of existing <code>YANTS</code> and <code>metaEnt</code> formats
 and specifications requires testing and examples.
 </p>
 
@@ -691,8 +691,8 @@ provide <i>ideal tree</i> information for non-trivial projects.
 </div>
 </div>
 
-<div id="outline-container-org0ad7e6d" class="outline-3">
-<h3 id="org0ad7e6d"><span class="section-number-3">4.2.</span> Future Extensions</h3>
+<div id="outline-container-org979a442" class="outline-3">
+<h3 id="org979a442"><span class="section-number-3">4.2.</span> Future Extensions</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Many of the following extensions have function drafts or well tested
@@ -769,7 +769,7 @@ a prerequisite for use in the general case.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Alex Ameen</p>
-<p class="date">Created: 2022-12-29 Thu 16:02</p>
+<p class="date">Created: 2022-12-29 Thu 16:41</p>
 </div>
 </body>
 </html>
