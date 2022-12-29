@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-12-28 Wed 18:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Floco About</title>
+<meta name="author" content="Alex Ameen" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1,
+               user-scalable=no'
+      name='viewport'>
+<style>html {
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f6fa;
+  color: #3c495a;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: "San Francisco", "Roboto", "Arial", sans-serif;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #586b82;
+  padding: 0;
+  margin: 20px 0 10px 0;
+  font-size: 1.1em;
+}
+h2 {
+  margin: 30px 0 10px 0;
+  font-size: 1.2em;
+}
+a {
+  color: #3fa7ba;
+  text-decoration: none;
+}
+p {
+  margin: 6px 0;
+  text-align: justify;
+}
+ul,
+ol {
+  margin: 0;
+  text-align: justify;
+}
+ul > li > code {
+  color: #586b82;
+}
+pre {
+  white-space: pre-wrap;
+}
+#content {
+  width: 96%;
+  max-width: 1000px;
+  margin: 2% auto 6% auto;
+  background: white;
+  border-radius: 2px;
+  border-right: 1px solid #e2e9f0;
+  border-bottom: 2px solid #e2e9f0;
+  padding: 0 115px 150px 115px;
+  box-sizing: border-box;
+}
+#postamble {
+  display: none;
+}
+h1.title {
+  background-color: #343c44;
+  color: #fff;
+  margin: 0 -115px;
+  padding: 60px 0;
+  font-weight: normal;
+  font-size: 2em;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+@media (max-width: 1050px) {
+  #content {
+    padding: 0 70px 100px 70px;
+  }
+  h1.title {
+    margin: 0 -70px;
+  }
+}
+@media (max-width: 800px) {
+  #content {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 4% 60px 4%;
+  }
+  h1.title {
+    margin: 0 -5%;
+    padding: 40px 5%;
+  }
+}
+pre,
+.verse {
+  box-shadow: none;
+  // background-color: #f9fbfd;
+  background-color: #f9fbfd;
+  border: 1px solid #e2e9f0;
+  color: #586b82;
+  padding: 10px;
+  font-family: monospace;
+  overflow: auto;
+  margin: 6px 0;
+}
+#table-of-contents {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#table-of-contents h2 {
+  margin-bottom: 5px;
+}
+#text-table-of-contents ul {
+  padding-left: 15px;
+}
+#text-table-of-contents > ul {
+  padding-left: 0;
+}
+#text-table-of-contents li {
+  list-style-type: none;
+}
+#text-table-of-contents a {
+  color: #7c8ca1;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+table {
+  border-color: #586b82;
+  font-size: 0.95em;
+}
+table thead {
+  color: #586b82;
+}
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+table tbody tr:hover {
+  background: #586b82 !important;
+  color: white;
+}
+table .left {
+  text-align: left;
+}
+table .right {
+  text-align: right;
+}
+.todo {
+  font-family: inherit;
+  color: inherit;
+}
+.done {
+  color: inherit;
+}
+.tag {
+  background: initial;
+}
+.tag > span {
+  background-color: #eee;
+  font-family: monospace;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 2px;
+  float: right;
+  margin-left: 5px;
+}
+#text-table-of-contents .tag > span {
+  float: none;
+  margin-left: 0;
+}
+.timestamp {
+  color: #7c8ca1;
+}
+@media print {
+  @page {
+    margin-bottom: 3cm;
+    margin-top: 3cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    font-size: 10px;
+  }
+  #content {
+    border: none;
+  }
+}
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Floco About</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org19766a8">1. Starting Point</a>
+<ul>
+<li><a href="#org092af32">1.1. Requirements</a></li>
+</ul>
+</li>
+<li><a href="#org623bf08">2. Approach</a>
+<ul>
+<li><a href="#org819f3e2">2.1. Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#org85cffb7">3. Features</a></li>
+<li><a href="#orgb7573a2">4. Release Progress and Future Extensions</a>
+<ul>
+<li><a href="#orgdda9890">4.1. Release Preparation</a></li>
+<li><a href="#orgf7286dd">4.2. Future Extensions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+<code>floco</code> is a <i>FOSS</i> project I authored during 2022 focused on optimizing
+<i>Node.js</i> package and build management.
+</p>
+
+<div id="outline-container-org19766a8" class="outline-2">
+<h2 id="org19766a8"><span class="section-number-2">1.</span> Starting Point</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Originally tasked with optimizing an existing set of ~170 <code>yarn</code> projects in a
+large mono-repo, <code>floco</code> developed organically to deal with pain points and
+bugs that <code>yarn</code> was unable to efficiently solve.
+In fairness to <code>yarn</code>, processing our ~170 builds in addition to 7,000+
+dependency modules was no simple task; but after dedicating 6 weeks to
+researching and experimenting with optimizations that <code>yarn</code> could provide,
+my team and I concluded that the tool could not meet our needs.
+</p>
+</div>
+
+<div id="outline-container-org092af32" class="outline-3">
+<h3 id="org092af32"><span class="section-number-3">1.1.</span> Requirements</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>All 170+ projects must build on <code>x86-64</code> and <code>aarch64</code> ( <i>ARM</i> )
+processors, for both <code>linux</code> and <code>darwin</code> ( <i>OSX</i> ).</li>
+<li>CI/CD systems must be able to automatically build, test, and deploy
+changed projects without making new pull requests to the <code>git</code> repository.
+<ul class="org-ul">
+<li>This meant that any lockfile management, build recipe generation, or
+other optimizations needed to be executed by easy to use tooling for
+developers as a part of their pre-commit or pre-pull-request process.</li>
+</ul></li>
+<li>Any number of projects may be modified in a single pull request.
+<ul class="org-ul">
+<li>This effectively ruled out using a private NPM registry to cache
+artifacts - even for staging.</li>
+</ul></li>
+<li>Any number of new projects or dependencies may be added or removed in a
+pull request.
+<ul class="org-ul">
+<li>Any pre-commit/pre-pull-request tooling was expected to walk developers
+through the process of initializing new projects, as well as
+regenerating build recipes in response for removed projects.</li>
+</ul></li>
+<li>The existing CI/CD build pipeline which ran in 45-65 minutes must run in
+under 5 minutes.
+<ul class="org-ul">
+<li>This time limit was set roughly based on the time it takes to build on
+a machine with populated caches.</li>
+<li>I personally found this requirement to be overly ambitious.</li>
+</ul></li>
+<li>New build pipeline for both CI/CD and local development must not interfere
+with existing flows until it can serve as a complete replacement for
+<code>yarn</code> for all projects.
+<ul class="org-ul">
+<li>This significantly increased the effort required to migrate projects,
+particularly because changes by developers were not gated by breakage to
+the new flow.
+New dependencies or unsupported <code>yarn</code> extensions could be added
+underneath us at any time.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org623bf08" class="outline-2">
+<h2 id="org623bf08"><span class="section-number-2">2.</span> Approach</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Roughly 4 months were dedicated to researching available tooling, new project
+organization strategies, and caching solutions.
+Eventually a prototype fork of our mono-repo was created which used a
+declarative package management tool <code>nix</code> in combination with <code>npm</code> and
+various bespoke scripts/=Makefile=s to dynamically generate 7,000+ build
+recipes with fine grained caching.
+</p>
+
+<p>
+This proof of concept relied on changes to existing projects that would
+conflict with existing <code>yarn</code> usage, failing to adhere to a stated
+requirement; but for the vast majority of changes CI/CD ran in 3-7 minutes.
+</p>
+
+<p>
+While test optimization had not been a requirement or goal; the infrastructure
+used to cache build artifacts also succeeded in caching test results,
+dramatically reducing load on CI/CD.
+</p>
+</div>
+
+<div id="outline-container-org819f3e2" class="outline-3">
+<h3 id="org819f3e2"><span class="section-number-3">2.1.</span> Next Steps</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Using this approach as a model, I began building a new package management
+tool for <i>Node.js</i> that would leverage <code>nix</code> to optimize arbitrary projects.
+</p>
+
+<p>
+This new project, <code>floco</code>, aimed to provide a convenient user experience for
+developers which would avoid much of the boilerplate infrastructure found in
+my prototype and formally specify existing <code>yarn</code> and <code>npm</code> behaviors and
+metadata such that <code>floco</code> would be interoperable with these tools
+( satisfying the requirement missing from the prototype ).
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org85cffb7" class="outline-2">
+<h2 id="org85cffb7"><span class="section-number-2">3.</span> Features</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The following features are fully implemented in the beta release of
+<a href="https://github.com/aameen-tulip/at-node-nix">floco</a>.
+Core features are currently being migrated to a
+<a href="https://github.com/aakropotkin/floco/">new repository</a> which will be the
+home of the first stable release.
+</p>
+
+<ul class="org-ul">
+<li>Seamless inter-operation with <code>npm</code> v8 and higher.
+<ul class="org-ul">
+<li><code>package-lock.json</code> files can be consumed directly by <code>floco</code> to produce
+an exact reproduction of <code>npm install</code> with no external declarations.</li>
+<li>As an optimization cached declarations may be generated using a
+single CLI command.</li>
+<li>Caches and updates to <code>package-lock.json</code> are automatically resolved such
+that developers can freely update their dependency graph without
+regenerating caches.
+Cached recipes that are still &ldquo;live&rdquo; are used, while modifications are
+handled dynamically.</li>
+</ul></li>
+<li>Standalone module installer written in <code>bash</code>.
+<ul class="org-ul">
+<li>This installer is used by <code>nix</code> to avoid dependence on <code>node</code> and other
+tooling; but can also be run standalone as an analogue to <code>pacote</code>.</li>
+<li>Using only <code>coreutils</code>, <code>findutils</code>, and <code>jq</code> a <code>node_modules/</code> tree can
+be created from published packages or built artifacts.
+This utility is ideal usage in sandboxes and <i>OCI</i> containers in CI/CD.</li>
+<li>This tool provides complete transparency of the install process without
+any of the obfuscated caching and network usage seen in <code>npm</code> and <code>yarn</code>.</li>
+</ul></li>
+<li>Universal metadata schema, and formal specification.
+<ul class="org-ul">
+<li>Because <i>Node.js</i> lacks a strict specification for package declaration,
+<code>floco</code> establishes one from a common subset of pseudo-standards followed
+by other tooling.</li>
+<li>Users can define package definitions directly using this schema, which is
+accompanied by an exhaustive collection of documentation and specs; or
+they can rely on <i>translators</i> to dynamically convert <code>npm</code> and
+<code>yarn</code> metadata.</li>
+<li>When leveraging translation, detailed errors are given when unrecognized
+or unsupported declarations are encountered, and warnings/lints are
+emitted when inefficient project structure ( circular dependencies for
+example ), improperly packaged tarballs, bogus/potentially dangerous
+installation scripts are defined, etc.</li>
+<li>Metadata checking may be cached, and additional optimization levels can
+be activated to avoid any unnecessary runtime processing in future builds.
+This can effectively &ldquo;inline&rdquo; the entire install/build process to avoid
+any conditionals or branching behavior.</li>
+</ul></li>
+<li>All caches for metadata checking, auditing, and translation, as well as
+build artifacts and test results are distributed.
+<ul class="org-ul">
+<li>If a build, test, or check is run once on a platform/arch combination it
+does not need to be run again on other machines which is a member of
+the same cluster.</li>
+<li>The &ldquo;input addressed hashing&rdquo; mechanism employed by <code>nix</code> enables this
+feature, and it is by far the biggest improvement <code>floco</code> boasts against
+other <i>Node.js</i> package management tooling.</li>
+</ul></li>
+<li>Well documented project templates provide an easy entry point to start using
+<code>floco</code> on existing <code>npm</code> projects.
+<ul class="org-ul">
+<li>The vast majority of projects need only run
+<code>nix init -t floco &amp;&amp; nix flake lock &amp;&amp; git add flake.* &amp;&amp; nix build</code> to
+get up and running.</li>
+<li>Additional templates for more complex use cases, for example managing
+multiple projects in different repositories, are provided.
+While these often require more setup, the process is documented such that
+a developer who is familiar with <code>nix</code> can have a cluster of projects up
+and running in less than an hour.</li>
+</ul></li>
+<li>Registry abstractions allow strict control over dependency resolution.
+<ul class="org-ul">
+<li>Unlike <code>yarn</code> or <code>npm</code> there is no need for proxy servers such as
+<code>verdaccio</code> to kludge overrides into a dependency graph.</li>
+<li><code>floco</code> allows users full visibility of their entire dependency graph in
+an easy to read JSON file which they can modify with alternative sources.</li>
+<li>In the context of a sandboxed build there is no network connection
+whatsoever, meaning the contents declared in the metadata are strictly
+what you get.
+For folks who haven&rsquo;t used <code>yarn</code> or <code>npm</code>, suffice to say that there is
+an entire cottage industry of utilities that exist to accomplish this,
+since network access and auto-updating is so deeply ingrained into the
+design of those tools; it is incredibly challenging to enforce such
+overrides without proxies.</li>
+</ul></li>
+<li>Build and test recipes are shared between CI/CD and local development.
+<ul class="org-ul">
+<li>Build and test suites declared using <code>floco</code> and <code>nix</code> are suitable for
+use in local development environments as well as CI/CD.</li>
+<li>If desired a user can run the entire build/test pipeline on their local
+machine, push it to a distributed cache, and GitHub Actions or similar
+systems are able to completely skip to publishing/deployment.
+This process is done quickly and securely using the input addressed hashes
+employed by <code>nix</code>.</li>
+<li>For local development reproducible a <code>devShell</code> can be defined or derived
+from existing build recipes to avoid any &ldquo;well it works on my machine&rdquo;
+nonsense among team members.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb7573a2" class="outline-2">
+<h2 id="orgb7573a2"><span class="section-number-2">4.</span> Release Progress and Future Extensions</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+While an incredible amount of progress has been made so far over the last 9
+months; there&rsquo;s still a few things to polish up before a first release, as
+well as plans for future extensions.
+</p>
+</div>
+
+<div id="outline-container-orgdda9890" class="outline-3">
+<h3 id="orgdda9890"><span class="section-number-3">4.1.</span> Release Preparation</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+While the prototype implementation relied heavily on <code>npm</code> and the
+availability of <code>npm</code> metadata in the form of <code>package-lock.json</code>, the first
+release aims to provide a configuration/metadata schema that can be written
+directly or translated from <code>package.json</code> files.
+</p>
+
+<p>
+This requires a stable metadata schema, with robust documentation, examples,
+linters, and standalone translation utilities that work together as modules.
+</p>
+
+<p>
+Existing translators are currently being migrated to NixOS Modules, a well
+established super-set of Nix used to compose disparate declaration files.
+Currently the core schema has been migrated and documented, as well as the
+<code>package-lock.json</code> v2/v3 and <code>package.json</code> translators are functional.
+The usage of NixOS Modules instead of existing YANTS and <i>metaEnt</i> formats
+and specifications requires testing and examples.
+</p>
+
+<p>
+Once these examples and tests are in place <code>floco</code> v1.0.0 will be released,
+recommending the use of <code>npm</code> or a wrapped abstraction <code>genModules</code> to
+provide <i>ideal tree</i> information for non-trivial projects.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7286dd" class="outline-3">
+<h3 id="orgf7286dd"><span class="section-number-3">4.2.</span> Future Extensions</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Many of the following extensions have function drafts or well tested
+prototypes in the beta release of <code>floco</code>; but are not developed enough for
+use in production code-bases as pieces of reliable infrastructure.
+</p>
+
+<ul class="org-ul">
+<li>Improved support for <code>package.json</code> workspaces.
+<ul class="org-ul">
+<li>Currently reliance on <code>npm</code> and special configuration based on in depth
+knowledge of <code>floco</code> is necessary to accomplish workspace support.</li>
+<li>Practically a template or example using workspaces is likely sufficient
+for the immediate future; but the NixOS Module system is expected to
+resolve issues that previously made workspaces complex to manage.</li>
+</ul></li>
+<li>Expanded CLI tooling.
+<ul class="org-ul">
+<li>Currently users are asked to interact with <code>nix</code> to drive builds, tests,
+update metadata, etc.
+Ideally a simple <code>bash</code> script would provide familiar commands such as
+<code>floco add &lt;PKG&gt;</code>, <code>floco publish</code>, <code>floco update</code>, <code>floco build</code>, etc
+that <code>npm</code> and <code>yarn</code> users are already familiar with.</li>
+</ul></li>
+<li>Improved project composition structures.
+<ul class="org-ul">
+<li>Currently a rudimentary API for composing projects exists for defining,
+consuming, and modifying package definitions across multiple
+repositories; and while it does an incredible job of hiding complexity
+it is not well documented, and the migration to NixOS Modules will
+necessitate small changes to the existing implementations of these APIs.</li>
+</ul></li>
+<li>Nix plugin to read/write caches globally and into <code>flake.lock</code>.
+<ul class="org-ul">
+<li>This is the <i>real</i> end goal for <code>floco</code>.
+It should be possible to read/write <code>floco</code> metadata to <code>flake.lock</code> and
+existing <code>nix</code> caches.</li>
+<li>There is currently a draft plugin which allows <code>nix</code> to adopt <code>npm</code> URIs
+to refer to packages as <code>lodash@4.17.21</code> which could be expanded upon.</li>
+<li>Project templates and propagation of build recipes could allow <code>nix</code> to
+abstract away the generation of <code>flake.nix</code> for the vast majority of
+projects which would be a significant UX breakthrough.</li>
+</ul></li>
+<li><code>yarn.lock</code> translators.
+<ul class="org-ul">
+<li>Development of <code>yarn</code> translators was dropped after the creation of the
+first working prototype in favor of <code>package-lock.json</code> translation.
+There is a large collection of existing routines that <i>can</i> translate
+<code>yarn.lock</code> to <code>nix</code>, but not using the <code>floco</code> metadata schema, and not
+in a coherent or documented flow.</li>
+</ul></li>
+<li>Semantic version parsing, and <i>ideal tree</i> formation.
+<ul class="org-ul">
+<li>Currently <code>floco</code> really relies on <code>npm</code> and its <code>package-lock.json</code> to
+construct non-trivial <code>node_module/</code> metadata declarations.
+This reliance is a major pain point for handling projects which
+currently use <code>yarn</code> since interoperability between <code>yarn</code> and <code>npm</code>
+across their associated lockfiles is implemented incredibly poorly, to
+such a degree that you cannot trust them to behave predictably in the
+same source tree.</li>
+<li>Semver parsing and solving SAT is implemented in the beta repository,
+and has been testing on large non-trivial inputs quite successfully.
+Still this effort requires a few weeks of polishing to really approve
+for use in production.</li>
+<li>Construction of <i>ideal tree</i> from semver SAT is a project in and of
+itself in order to support things like <code>optionDependencies</code>,
+<code>peerDependencies</code>, <code>bunbledDependencies</code>, and other oddballs which are
+a prerequisite for use in the general case.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Alex Ameen</p>
+<p class="date">Created: 2022-12-28 Wed 18:21</p>
+</div>
+</body>
+</html>
